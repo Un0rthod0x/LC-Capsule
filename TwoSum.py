@@ -6,5 +6,5 @@ class Solution:
             hashe[nums[i]] = i
 
         for j in range(len(nums)):
-            if ((target - nums[j]) in hashe) == True:
+            if ((target - nums[j]) in hashe) == True and j != hashe.get(target-nums[j]):
                 return [j, hashe.get(target-nums[j])]
